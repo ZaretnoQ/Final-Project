@@ -12,7 +12,7 @@ while True:
     sched.next_day_notification(task_list)
     sched.seven_day_notification(task_list)
 
-    print("\n=======================")
+    print("=======================")
     print("1. Add tasks\n2. Remove tasks\n3. Display Tasks\n4. Exit")
     choice = int(input("Choose a function: "))
     
@@ -32,16 +32,19 @@ while True:
 
     #removing tasks
     elif choice == 2:
+        print("=======================")
         print("Current Tasks:")
 
         for i in range(len(task_list)):
             print(f"{i+1}. {task_list[i].name} - {task_list[i].date}")
 
+        print("=======================")
         user_input = int(input("What task would you like to remove: "))
         task_list.pop(user_input - 1)
 
     #displaying tasks    
     elif choice == 3:
+        print("=======================")
         print("Current Tasks: ")
 
         for i in range(len(task_list)):
